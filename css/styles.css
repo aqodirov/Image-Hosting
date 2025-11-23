@@ -1,0 +1,144 @@
+:root {
+    --font-family: "Inter", sans-serif;
+    --second-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #151515;
+    color: #ffffff;
+    text-align: center;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  font-optical-sizing: auto;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+  font-optical-sizing: auto;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+.container > .header {
+  margin-top: 35px;
+}
+
+.header > h1 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 0.87;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+.header > h2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+}
+
+.header>button{
+    margin-top: 35px;
+    background: #0060ff;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 7px;
+    padding: 12px 16px;
+}
+
+.header>button>a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 560px;
+}
+
+.slideshow img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  user-select: none;
+}
+
+.slideshow img.active {
+  opacity: 1;
+}
+
+.slideshow .controls {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none; 
+  padding: 0 12px;
+}
+
+.slideshow button.slide-btn {
+  pointer-events: auto;
+  background: rgba(0,0,0,0.45);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+.slideshow button.slide-btn:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .slideshow button.slide-btn { padding: 6px 10px; font-size: 18px; }
+}
+.container>.footer{
+  font-size:14px;
+}
